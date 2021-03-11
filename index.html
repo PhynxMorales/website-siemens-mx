@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+  <link rel="shortcut icon"
+    href="https://new.siemens.com/apps/settings/wcm/designs/siemens-sites/siemens-com/favicon.ico" type="image/x-icon">
+
+  <title>Siemens México</title>
+</head>
+
+<body>
+
+  <style>
+    :root {
+      --color-siemens: #0b868e;
+    }
+
+    .boton {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding-bottom: 0;
+      color: #2d373c;
+      opacity: .6;
+    }
+
+    .card {
+      box-shadow: 0 10px 20px 0 rgb(56 53 53 / 32%);
+    }
+
+    .fullscreen-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      min-width: 100vw;
+      height: 100%;
+
+    }
+
+    .text-banner {
+      z-index: 1000;
+    }
+
+    .btn .btn-custom {
+      color: #0d6efd;
+      border-color: #0d6efd;
+    }
+
+    .btn .btn-primary {
+      color: #26292e !important;
+      border-color: var(--color-siemens) !important;
+    }
+
+    .btn-primary {
+      color: #0b868e;
+      background-color: #fff;
+      border-radius: 25px;
+    }
+
+    .btn-primary:hover {
+      color: #fff;
+      background-color: #0b868e;
+    }
+
+    .btn-secundary {
+      color: #fff;
+      background-color: #0b868e;
+      border-radius: 25px;
+
+    }
+
+    .btn-secundary:hover {
+      color: #0b868e;
+      background-color: #fff;
+      border-radius: 25px;
+
+    }
+
+    .img-about {
+      max-width: 70%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .about-us {
+      background-image: url(https://smartindustryconsultants.nl/wp-content/themes/smartindustry/style/public/images/circle_background.png);
+      background-size: cover;
+      background-color: #fff;
+      background-position: center;
+    }
+
+
+    .ventajas {
+      border-radius: 5px solid #000;
+      padding: 15px;
+
+    }
+
+    .ventajas:hover {
+      background-color: #0b868e;
+      color: #fff;
+      background: linear-gradient(125deg, #0b6d8b, #09b4e8);
+    }
+
+    .bg-footer {
+      background-color: #e6e6e6;
+    }
+
+    .text-custom {
+      color: #26292e;
+    }
+
+    .text-custom a:hover {
+      color: #0b868e;
+    }
+
+    .footer svg {
+      fill: #0b6d8b
+    }
+
+    .cotiza {
+
+      padding: 10px 15px 10px 15px;
+      transition: transform 1.2s;
+      color: #fff;
+      background: linear-gradient(125deg, #0b6d8b, #09b4e8);
+    }
+
+    .cotiza:hover {
+      box-shadow: 2px 3px 5px -1px rgb(8 8 8 / 83);
+      transform: scale(1.09);
+      color: #fff;
+    }
+  </style>
+
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mt-2">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://new.siemens.com/etc.clientlibs/siemens-sites/components/content/header/clientlibs/resources/logo/siemens-logo-default.svg"
+          height="30" alt="" loading="lazy" />
+
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button style="  -webkit-box-shadow: 0 0px 0px 0 rgb(0 0 0 / 0%), 0 0px 0px 0 rgb(0 0 0 / 0%);
+    box-shadow:    box-shadow: 0 0px 0px 0 rgb(0 0 0 / 0%), 0 0px 0px 0 rgb(0 0 0 / 0%); color: #000;"
+                class="btn  dropdown-toggle" type="button" id="dropdownMenu2" data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                Productos
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">Capacitores</button></li>
+                <li>
+                  <button class="dropdown-item" type="button">Gabinetes</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Interruptores</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Motores</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Protección a motores</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Tableros</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Variadores</button>
+                </li>
+              </ul>
+            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contáctanos</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="https://api.whatsapp.com/send?phone=+5213323885754">
+              <button class="btn btn-secundary me-3 me-lg cotiza" role="button" tabindex="-1">¡COTIZA AHORA!</button>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-1">
+            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+              <img src="https://cdn.shopify.com/s/files/1/0040/8551/4369/files/email.svg?v=1614905375" height="15"
+                alt="" loading="lazy" />
+              <strong class="d-none d-sm-block ms-1">Atención a clientes</strong>
+            </a>
+          </li>
+
+          <li class="nav-item me-3 me-lg-1">
+            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+              <img src="https://cdn.shopify.com/s/files/1/0040/8551/4369/files/Mundo.svg?v=1614905375" height="15"
+                alt="" loading="lazy" />
+              <strong class="d-none d-sm-block ms-1">Mexico</strong>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Banner-->
+  <div id="intro" class="bg-image vh-100" style="
+          background: url('./assets/siemens__1.mp4');
+        ">
+    <img src="" class="d-block w-100" alt="..." />
+    <div class="fullscreen-bg">
+      <video loop="" muted="" autoplay=""
+        poster="https://smartindustryconsultants.nl/wp-content/uploads/2019/09/andrew-wong-1308568-unsplash-e1559725155131.jpg"
+        class="fullscreen-bg__video">
+        <source src="./assets/siemens__1.mp4">
+      </video>
+    </div>
+    <div class="mask" style="background-color: rgba(165, 165, 165, 0);">
+      <div class="container d-flex justify-content-start align-items-center h-100 mt-4" style="color: #f2f2f2;">
+        <div class="row">
+          <div class="col-lg-6 mask-custom p-3">
+            <h1 class="display-1 text-uppercase" style="letter-spacing: 3px;">SIEMENS México</h1>
+            <p class="lead mb-4">Productos para los distintos sectores industriales con un diseño que marca tendencia y
+              funciones innovadoras con una calidad única</p>
+            <a href="https://api.whatsapp.com/send?phone=+5213323885754">
+              <button type="button" class="btn btn-primary btn-rounded btn-lg mb-3">¡Cotiza hoy mismo!</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Banner-->
+
+
+
+
+
+  <!-- Carousel wrapper -->
+
+  <div class="col-12 mt-4 mb-2 text-start">
+    <div>
+      <p style="margin: 0 0 0 68px ;" class="h2">
+        Productos y soluciones
+    </div>
+    </p>
+  </div>
+  <div class="container mb-3">
+
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+      <div class="col-xl-4">
+        <div class="card">
+          <div class="bg-image hover-overlay hover-zoom ripple ripple-surface ripple-surface-light">
+            <img src="./assets/capacitores.jpg" class="card-img-top" alt="..." />
+            <a href="#!">
+              <div class="mask" style="background: linear-gradient( 
+                  45deg
+                  , rgb(11 222 182 / 50%), rgb(255 255 255 / 50%) 100% );"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Capacitores</h5>
+            <p class="card-text">
+              Diseñador para compensar la energia reactiva, motores a travéz del arrancador.
+              Capacitores para corrección de factor de potencia.
+            </p>
+            <div class="boton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xl-4">
+        <div class="card">
+
+          <div class="bg-image hover-overlay hover-zoom ripple ripple-surface ripple-surface-light">
+            <img src="./assets/gabinete.jpg" class="card-img-top" alt="..." />
+            <a href="#!">
+              <div class="mask" style="background: linear-gradient( 
+45deg
+, rgb(11 222 182 / 50%), rgb(255 255 255 / 50%) 100% );"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Gabinetes</h5>
+            <p class="card-text">
+              Siemens ofrece para sus arrancadores una gran variedad de gabinetes para el cumplimiento de diferentes
+              grados de
+              protección NEMA.
+            </p>
+            <div class="boton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card">
+          <div class="bg-image hover-overlay hover-zoom ripple ripple-surface ripple-surface-light">
+            <img src="./assets/interruptores.jpg" class="card-img-top" alt="..." />
+            <a href="#!">
+              <div class="mask" style="background: linear-gradient( 
+                  45deg
+                  , rgb(11 222 182 / 50%), rgb(255 255 255 / 50%) 100% );"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Interruptores</h5>
+            <p class="card-text">
+              Protegen circuitos y aparatos en instalaciones eléctricas
+              residenciales,
+              comerciales e industriales contra sobrecarga y cortocircuitos.
+            </p>
+            <div class="boton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="card">
+
+          <div class="bg-image hover-overlay hover-zoom ripple ripple-surface ripple-surface-light">
+            <img src="./assets/motores.jpg" class="card-img-top" alt="...">
+            <a href="#!">
+              <div class="mask" style="background: linear-gradient( 
+      45deg
+      , rgb(11 222 182 / 50%), rgb(255 255 255 / 50%) 100% );"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Motores</h5>
+            <p class="card-text">
+              Siemens desarrollo sistemas individuales en los motores que
+              juntos
+              constituyen un sistema completo para
+              maximizar el aprovechamiento energético.
+            </p>
+            <div class="boton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card">
+
+          <div class="bg-image hover-overlay hover-zoom ripple ripple-surface ripple-surface-light">
+            <img src="./assets/proteccion_motor.jpg" class="card-img-top" alt="...">
+            <a href="#!">
+              <div class="mask" style="background: linear-gradient( 
+      45deg
+      , rgb(11 222 182 / 50%), rgb(255 255 255 / 50%) 100% );"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Protección a motores</h5>
+            <p class="card-text">
+              Los arrancadores automáticos y fijos son de tipo autransformador se utilizan para el arranque de motores
+              con
+              rotor de jaula de ardilla, para potencias hasta 220 V y 440 V, 60 Hz.
+            </p>
+            <div class="boton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card">
+
+          <div class="bg-image hover-overlay hover-zoom ripple ripple-surface ripple-surface-light">
+            <img src="./assets/tableros.jpg" class="card-img-top" alt="...">
+            <a href="#!">
+              <div class="mask" style="background: linear-gradient( 
+      45deg
+      , rgb(11 222 182 / 50%), rgb(255 255 255 / 50%) 100% );"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Tableros</h5>
+            <p class="card-text">
+              Tableros normalizados de baja tensión fabricados de acuerdo a las Normas Eléctricas vigentes en el
+              territorio nacional.
+              Nos ofrecen una amplia posibilidad de aplicaciones en distribución BT.
+            </p>
+            <div class="boton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card">
+
+          <div class="bg-image hover-overlay hover-zoom ripple ripple-surface ripple-surface-light">
+            <img src="./assets/variadores.jpg" class="card-img-top" alt="...">
+            <a href="#!">
+              <div class="mask" style="background: linear-gradient( 
+      45deg
+      , rgb(11 222 182 / 50%), rgb(255 255 255 / 50%) 100% );"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Variadores</h5>
+            <p class="card-text">
+              Operan a velocidad constante o cuasi-constante, y con valores que dependen de la alimentación y de las
+              características
+              propias del motor, los cuales no se pueden modificar fácilmente
+            </p>
+            <div class="boton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---About us-->
+  <div class="container-fluid">
+    <div class="row py-5 px-5 about-us">
+      <div class="col-lg-6 d-flex justify-content-center">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/WhatsApp_Image_2021-03-05_at_6.22.23_PM.jpeg?v=1614990173"
+          alt="" class="imagen img-about">
+      </div>
+      <div class="col-lg-6">
+        <h3 class="fs-1">Siemens</h3>
+        <p class="fw-bold fs-3">Una potencia tecnológica global</p>
+        <p class="lh-lg fs-5 text-justify">En el año fiscal 2020, que finalizó el 30 de septiembre de 2020, el Grupo
+          Siemens generó unos ingresos de 57.100
+          millones de euros y un beneficio neto de 4.200 millones de euros. Al 30 de septiembre de 2020, la compañía
+          tenía
+          alrededor de 293,000 empleados en todo el mundo.
+        </p>
+        <p class="lh-lg fs-5 text-justify">Durante más de 170 años, el nombre Siemens ha sido sinónimo de
+          internacionalidad y presencia mundial.
+
+
+
+
+          Nuestros países tienen el poder para servir a nuestros clientes, para crear oportunidades de mercado e
+          impulsar el
+          crecimiento en la configuración más eficiente. Operamos en la producción y las plantas de fabricación en
+          todo
+          el mundo.
+          Contamos con edificios de oficinas, almacenes, instalaciones de investigación y desarrollo, así como
+          oficinas
+          de ventas
+          en casi todos los países / regiones del mundo.
+        </p>
+        <a href="https://alianzaelectrica.com/catalogos/nuevos/SIEMENS.pdf">
+          <button type="button" class="btn btn-primary btn-lg ml-1" role="button" tabindex="-1">Ver
+            Presentación</button>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+5213323885754">
+          <button type="button" class="btn btn-secundary btn-lg mx-2" role="button" tabindex="-1">¡Llamar
+            ahora!</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--About us-->
+
+  <!--Ventajas Competitivas-->
+  <div class="container-fluid">
+    <div class="row py-5 px-5">
+      <div class="col-lg-3 ventajas ">
+        <img class="mb-3 mt-3" id="ventaja1"
+          src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/iconos_landing_siemens_Mesa_de_trabajo_1.png?v=1614989921"
+          alt="" width="80">
+        <h4>Hasta un 75% de ahorro energético</h4>
+        <p class="fw-light text-justify mb-2">Mejor rendimiento en tus equipos.
+        </p>
+      </div>
+      <div class="col-lg-3 ventajas">
+        <img class="mb-3 mt-3" id="ventaja2"
+          src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/iconos_landing_siemens-02.png?v=1614989921" alt=""
+          width="80">
+        <h4>Hasta un 80% menos de espacio requerido</h4>
+        <p class="fw-light text-justify mb-2">Adaptabilidad y sustentabilidad comprobada.
+        </p>
+      </div>
+      <div class="col-lg-3 ventajas">
+        <img class="mb-3 mt-3" id="ventaja3"
+          src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/iconos_landing_siemens-03.png?v=1614989922" alt=""
+          width="80">
+        <h4>Servicios 100% del ciclo de vida de una sola fuente</h4>
+        <p class="fw-light text-justify mb-2">Calidad en todos nuestros productos.
+        </p>
+      </div>
+      <div class="col-lg-3 ventajas">
+        <img class="mb-3 mt-3" id="ventaja3"
+          src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/iconos_landing_siemens-04.png?v=1614989922  "
+          alt="" width="80">
+        <h4>Disponible en todo el mundo</h4>
+        <p class="fw-light text-justify mb-2">Solicita con tu promotor de sonora.
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <!--Ventajas Competitivas-->
+
+
+  <!-- Footer -->
+  <footer class="footer bg-footer text-center text-custom mt-4">
+    <!-- Grid container -->
+    <div class="container p-4">
+
+
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row mt-4 mb-4">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="text-uppercase text-start mb-3">
+              <img width="150"
+                src="https://new.siemens.com/etc.clientlibs/siemens-sites/components/content/header/clientlibs/resources/logo/siemens-logo-default.svg"
+                alt="">
+            </h5>
+            <div class="col-12">
+              <div class="text-footer">
+                <p class="text-start">Estimados clientes, para nosotros SIEMENS Sinaloa CDMX es un placer y un gusto
+                  mostrarle nuestro
+                  catálogo de productos
+                  de la familia siemens, para ofrecerle soluciones en baja y media tensión.</p>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mx-auto text-lg-start">
+            <h5 class="text-uppercase fw-bold">Productos</h5>
+
+            <ul class="list-unstyled ">
+              <li>
+                <a href="#!" class="text-custom">Capacitores</a>
+              </li>
+              <li>
+                <a href="#!" class="text-custom">Gabinetes</a>
+              </li>
+              <li>
+                <a href="#!" class="text-custom">Interruptores</a>
+              </li>
+              <li>
+                <a href="#!" class="text-custom">Protección a motores</a>
+              </li>
+              <li>
+                <a href="#!" class="text-custom">Tableros</a>
+              </li>
+              <li>
+                <a href="#!" class="text-custom">Variadores</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 text-lg-start">
+            <h5 class="text-uppercase fw-bold">CONTÁCTANOS</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="mailto:ventas.cdmx@siemsupply.com.mx" class="text-custom mb-2"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                  </svg> ventas.cdmx@siemsupply.com.mx</a>
+              </li>
+              <li>
+                <a href="mailto:ventas1.cdmx@siemsupply.com.mx" class="text-custom mb-2"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                  </svg> ventas1.cdmx@siemsupply.com.mx</a>
+              </li>
+              <li>
+                <a href="mailto:ventas2.cdmx@siemsupply.com.mx" class="text-custom mb-2"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                  </svg> ventas2.cdmx@siemsupply.com.mx</a>
+              </li>
+              <li>
+                <a href="tel:3323885754" class="text-custom mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path
+                      d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                  </svg> +52 (33) 2388 - 5754</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 ">
+
+
+            <div class="ratio ratio-16x9">
+              <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/FAFFfiUZQ0Y"
+                title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="33" fill="currentColor" class="bi bi-facebook"
+            viewBox="0 0 16 16">
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+          </svg></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" fill="currentColor" class="bi bi-twitter"
+            viewBox="0 0 16 16">
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+          </svg>
+        </a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="32" fill="currentColor" class="bi bi-youtube"
+            viewBox="0 0 16 16">
+            <path
+              d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+          </svg></a>
+
+      </section>
+      <!-- Section: Social media -->
+
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">SiemensMéxico</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
